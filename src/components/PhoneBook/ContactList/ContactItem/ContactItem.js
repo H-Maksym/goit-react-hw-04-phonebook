@@ -1,21 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Button from 'components/PhoneBook/Button';
 import { StyledTextList } from './ContactItem.styled';
 
-export default class ContactItem extends Component {
-  render() {
-    const { id, name, number, onDelContact } = this.props;
-    return (
-      <>
-        <StyledTextList>{name}</StyledTextList>
-        <StyledTextList>{number}</StyledTextList>
-        <Button onClick={onDelContact} id={id}>
-          Delete
-        </Button>
-      </>
-    );
-  }
+export default function ContactItem({ id, name, number, onDelContact }) {
+  return (
+    <>
+      <StyledTextList>{name}</StyledTextList>
+      <StyledTextList>{number}</StyledTextList>
+      <Button onClick={onDelContact} id={id}>
+        Delete
+      </Button>
+    </>
+  );
 }
 
 ContactItem.propTypes = {
