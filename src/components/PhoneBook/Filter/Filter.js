@@ -18,9 +18,9 @@ export default function Filter({ title = '', name, value, changeFilter }) {
         <Box position="absolute" right="20%">
           <ButtonIcon
             type="button"
-            onClick={() => {
-              console.log('click');
-            }}
+//             onClick={() => {
+//               console.log('click');
+//             }}
             aria-label="search button"
           >
             <BsSearch size="20px" />
